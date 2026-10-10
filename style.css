@@ -1,0 +1,295 @@
+/* B's Chop Bar stylesheet. Phone layout first, wider screens at the bottom. */
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.6;
+  color: #2b2118;
+  background-color: #fff8ec;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header and navigation */
+header {
+  padding: 12px 20px;
+  background-color: #1f4d3a;
+  color: white;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand img {
+  margin-right: 12px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav a:link,
+nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #e07a1f;
+}
+
+/* page sections */
+main {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 32px 0;
+  border-bottom: 1px solid #e6d9c3;
+}
+
+h2 {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  font-size: calc(1.3rem + 1.5vw);
+  color: #1f4d3a;
+}
+
+h3 {
+  color: #1f4d3a;
+}
+
+mark {
+  background-color: #ffe2b8;
+}
+
+.hero {
+  padding: 56px 0;
+  text-align: center;
+}
+
+/* buttons */
+.button,
+button {
+  display: inline-block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e07a1f;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.button:hover,
+button:hover {
+  background-color: #c4640f;
+}
+
+button.plain {
+  border: 1px solid #e6d9c3;
+  background-color: white;
+  color: #2b2118;
+}
+
+button.plain:hover {
+  background-color: #e6d9c3;
+}
+
+/* menu cards */
+.card {
+  box-sizing: border-box;
+  margin: 0 0 16px 0;
+  padding: 16px;
+  border: 1px solid #e6d9c3;
+  border-top: 5px solid #e07a1f;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.card:hover {
+  border-color: #1f4d3a;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.price {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #c4640f;
+}
+
+/* order form */
+.order-layout {
+  max-width: 36em;
+}
+
+fieldset {
+  margin: 0 0 16px 0;
+  padding: 16px;
+  border: 1px solid #e6d9c3;
+  border-radius: 8px;
+  background-color: white;
+}
+
+fieldset fieldset {
+  margin: 16px 0 0 0;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+  color: #1f4d3a;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+label.inline {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="time"],
+input[type="number"],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid #e6d9c3;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* the customer's bill */
+.bill-box {
+  box-sizing: border-box;
+  margin-top: 24px;
+  padding: 16px;
+  border: 2px dashed #1f4d3a;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.bill-box h3 {
+  margin-top: 0;
+}
+
+#receipt {
+  white-space: pre-line;
+  font-family: "Courier New", monospace;
+}
+
+#bill {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1f4d3a;
+}
+
+/* opening hours table */
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+caption {
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #e6d9c3;
+  text-align: left;
+}
+
+th {
+  background-color: #1f4d3a;
+  color: white;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 12px 0;
+}
+
+/* footer */
+footer {
+  padding: 24px;
+  background-color: #1f4d3a;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a:link,
+footer a:visited {
+  color: white;
+}
+
+/* wider screens */
+@media (min-width: 45em) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .card {
+    flex: 1;
+    margin: 0 8px;
+  }
+
+}

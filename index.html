@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="B's Chop Bar. Home cooked Ghanaian food near campus.">
+  <title>B's Chop Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="logo.svg" alt="B's Chop Bar logo, a steaming bowl" width="56" height="56">
+      <h1 id="bar-name">B's Chop Bar</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2>Home cooked food, served hot</h2>
+      <p>Jollof, waakye, banku and cold sobolo, five minutes from campus.</p>
+      <a class="button" href="#order">Order now</a>
+    </section>
+
+    <section id="about">
+      <h2>About us</h2>
+      <p>
+        B's Chop Bar started as a small table outside Auntie B's house.
+        Students kept coming back, so the table became a kitchen. We still cook
+        everything <strong>fresh every morning</strong> and we still close when
+        the pot is empty.
+      </p>
+      <h3>Why students like us</h3>
+      <ul>
+        <li>Big portions at student prices</li>
+        <li>Food is ready in under ten minutes</li>
+        <li><mark>Chop Club members get 10% off orders of GHS 100 or more</mark></li>
+      </ul>
+    </section>
+
+    <section id="menu">
+      <h2>Menu</h2>
+      <div class="menu">
+        <article class="card">
+          <h3>Jollof Rice</h3>
+          <p>Smoky party jollof with fried chicken and shito.</p>
+          <p class="price">GHS 35.00</p>
+        </article>
+        <article class="card">
+          <h3>Waakye</h3>
+          <p>Rice and beans with gari, spaghetti, egg and wele.</p>
+          <p class="price">GHS 30.00</p>
+        </article>
+        <article class="card">
+          <h3>Banku &amp; Tilapia</h3>
+          <p>Grilled tilapia with banku and fresh pepper.</p>
+          <p class="price">GHS 60.00</p>
+        </article>
+        <article class="card">
+          <h3>Sobolo</h3>
+          <p>Cold hibiscus drink with ginger and pineapple.</p>
+          <p class="price">GHS 10.00</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order</h2>
+      <p>Fill in the form and we will have it ready when you arrive.</p>
+
+      <div class="order-layout">
+
+        <form action="thanks.html" method="get">
+          <fieldset>
+            <legend>Your details</legend>
+
+            <label for="customer">Name</label>
+            <input type="text" id="customer" name="customer" placeholder="Ama Mensah" required>
+
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="024 000 0000" required>
+
+            <label for="pickup-time">Pickup time</label>
+            <input type="time" id="pickup-time" name="pickup-time">
+
+            <fieldset>
+              <legend>How do you want it?</legend>
+              <label class="inline">
+                <input type="radio" name="service" value="takeaway" checked> Takeaway
+              </label>
+              <label class="inline">
+                <input type="radio" name="service" value="eat-in"> Eat in
+              </label>
+            </fieldset>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your order</legend>
+
+            <label for="jollof">Jollof Rice (GHS 35)</label>
+            <input type="number" id="jollof" name="jollof" min="0" max="10" value="0">
+
+            <label for="waakye">Waakye (GHS 30)</label>
+            <input type="number" id="waakye" name="waakye" min="0" max="10" value="0">
+
+            <label for="banku">Banku &amp; Tilapia (GHS 60)</label>
+            <input type="number" id="banku" name="banku" min="0" max="10" value="0">
+
+            <label for="sobolo">Sobolo (GHS 10)</label>
+            <input type="number" id="sobolo" name="sobolo" min="0" max="10" value="0">
+
+            <label class="inline">
+              <input type="checkbox" id="member" name="member" value="yes"> I am a Chop Club member
+            </label>
+
+            <label for="notes">Anything else?</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Extra shito, no egg..."></textarea>
+          </fieldset>
+
+          <button type="button" onclick="showBill()">Work out my bill</button>
+          <button type="submit">Send my order</button>
+          <button type="reset" class="plain">Clear</button>
+        </form>
+
+        <aside class="bill-box">
+          <h3>Your bill</h3>
+          <noscript>Please enable JavaScript to see your bill.</noscript>
+          <div id="receipt">Pick your food, then press "Work out my bill".</div>
+          <p id="bill"></p>
+        </aside>
+
+      </div>
+    </section>
+
+    <section id="visit">
+      <h2>Visit us</h2>
+      <p>
+        Shop 4, Berekuso Road<br>
+        Call us on <a href="tel:0240000000">024 000 0000</a>
+      </p>
+
+      <table>
+        <caption>Opening hours</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Opens</th>
+            <th>Closes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday to Friday</td>
+            <td>8:00 am</td>
+            <td>8:00 pm</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>10:00 am</td>
+            <td>6:00 pm</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td colspan="2">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Good to know</h3>
+      <dl>
+        <dt>Chop Club</dt>
+        <dd>Our free members card. Ask at the counter and you get it the same day.</dd>
+        <dt>Payment</dt>
+        <dd>We take cash and mobile money.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <span id="footer-name">B's Chop Bar</span>. Built by Davis for CS341 Web Technologies.</p>
+    <p><a href="#about">Back to top</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
